@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="E:\code-all\code-lbs\LBS\LbsDAlUnitTest\bin\Debug\LbsDAlUnitTest.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-09-29" time="17:46:32">
+  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.5477" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="E:\code-all\code-lbs\LBS\LbsDAlUnitTest\bin\Debug" machine-name="PC-20140223IKWV" user="zx" user-domain="PC-20140223IKWV" />
+  <culture-info current-culture="zh-CN" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="E:\code-all\code-lbs\LBS\LbsDAlUnitTest\bin\Debug\LbsDAlUnitTest.dll" executed="True" result="Failure" success="False" time="2.593" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="LbsDAlUnitTest" executed="True" result="Failure" success="False" time="2.575" asserts="0">
+        <results>
+          <test-suite type="TestFixture" name="UserInfoDA_Test" executed="True" result="Failure" success="False" time="2.573" asserts="0">
+            <results>
+              <test-case name="LbsDAlUnitTest.UserInfoDA_Test.TestEditUser" executed="True" result="Error" success="False" time="2.551" asserts="0">
+                <failure>
+                  <message><![CDATA[System.Data.SqlClient.SqlException : ')' 附近有语法错误。]]></message>
+                  <stack-trace><![CDATA[at LbsDAl.SQLHelper.ExecuteNonQuery(String cmdText, CommandType cmdType, SqlParameter[] param) in e:\code-all\code-lbs\LBS\LbsDAl\SQLHelper.cs:line 66
+at LbsDAl.UsersInfoDataAccess.EditUserInfo(UsersInfo user) in e:\code-all\code-lbs\LBS\LbsDAl\UsersInfoDataAccess.cs:line 72
+at LbsDAlUnitTest.UserInfoDA_Test.TestEditUser() in e:\code-all\code-lbs\LBS\LbsDAlUnitTest\UserInfoDA_Test.cs:line 31
+]]></stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

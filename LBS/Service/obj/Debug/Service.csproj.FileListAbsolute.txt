@@ -1,0 +1,10 @@
+H:\New Project\LBS\Service\bin\Service.dll.config
+H:\New Project\LBS\Service\bin\Service.dll
+H:\New Project\LBS\Service\bin\Service.pdb
+H:\New Project\LBS\Service\obj\Debug\Service.dll
+H:\New Project\LBS\Service\obj\Debug\Service.pdb
+H:\New Project\LBS\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
+H:\New Project\LBS\Service\bin\LbsDAl.dll
+H:\New Project\LBS\Service\bin\LbsModel.dll
+H:\New Project\LBS\Service\bin\LbsDAl.pdb
+H:\New Project\LBS\Service\bin\LbsModel.pdb

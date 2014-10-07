@@ -9,6 +9,7 @@ E:\code-all\code-lbs\LBS\LbsDAlUnitTest\obj\Debug\LbsDAlUnitTest.csprojResolveAs
 E:\code-all\code-lbs\LBS\LbsDAlUnitTest\obj\Debug\LbsDAlUnitTest.pdb
 E:\code-all\code-lbs\LBS\LbsDAlUnitTest\bin\Debug\LbsDAlUnitTest.exe
 E:\code-all\code-lbs\LBS\LbsDAlUnitTest\obj\Debug\LbsDAlUnitTest.exe
+<<<<<<< HEAD
 H:\New Project\LBS\LbsDAlUnitTest\obj\Debug\LbsDAlUnitTest.exe
 H:\New Project\LBS\LbsDAlUnitTest\obj\Debug\LbsDAlUnitTest.pdb
 H:\New Project\LBS\LbsDAlUnitTest\bin\Debug\LbsDAlUnitTest.exe
@@ -20,3 +21,15 @@ H:\New Project\LBS\LbsDAlUnitTest\bin\Debug\LbsModel.pdb
 H:\New Project\LBS\LbsDAlUnitTest\bin\Debug\nunit.framework.xml
 H:\New Project\LBS\LbsDAlUnitTest\obj\Debug\LbsDAlUnitTest.csprojResolveAssemblyReference.cache
 H:\New Project\LBS\LbsDAlUnitTest\bin\Debug\LbsDAlUnitTest.exe.config
+=======
+E:\code-all\code-lbs\code\ad_lbs_service\LBS\LbsDAlUnitTest\bin\Debug\LbsDAlUnitTest.exe
+E:\code-all\code-lbs\code\ad_lbs_service\LBS\LbsDAlUnitTest\bin\Debug\LbsDAlUnitTest.pdb
+E:\code-all\code-lbs\code\ad_lbs_service\LBS\LbsDAlUnitTest\bin\Debug\LbsDAl.dll
+E:\code-all\code-lbs\code\ad_lbs_service\LBS\LbsDAlUnitTest\bin\Debug\LbsModel.dll
+E:\code-all\code-lbs\code\ad_lbs_service\LBS\LbsDAlUnitTest\bin\Debug\LbsDAl.pdb
+E:\code-all\code-lbs\code\ad_lbs_service\LBS\LbsDAlUnitTest\bin\Debug\LbsModel.pdb
+E:\code-all\code-lbs\code\ad_lbs_service\LBS\LbsDAlUnitTest\bin\Debug\nunit.framework.xml
+E:\code-all\code-lbs\code\ad_lbs_service\LBS\LbsDAlUnitTest\obj\Debug\LbsDAlUnitTest.csprojResolveAssemblyReference.cache
+E:\code-all\code-lbs\code\ad_lbs_service\LBS\LbsDAlUnitTest\obj\Debug\LbsDAlUnitTest.exe
+E:\code-all\code-lbs\code\ad_lbs_service\LBS\LbsDAlUnitTest\obj\Debug\LbsDAlUnitTest.pdb
+>>>>>>> origin/master

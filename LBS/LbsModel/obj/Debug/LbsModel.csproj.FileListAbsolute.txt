@@ -2,8 +2,16 @@ E:\code-all\code-lbs\LBS\LbsModel\bin\Debug\LbsModel.dll
 E:\code-all\code-lbs\LBS\LbsModel\bin\Debug\LbsModel.pdb
 E:\code-all\code-lbs\LBS\LbsModel\obj\Debug\LbsModel.dll
 E:\code-all\code-lbs\LBS\LbsModel\obj\Debug\LbsModel.pdb
+<<<<<<< HEAD
 H:\New Project\LBS\LbsModel\bin\Debug\LbsModel.dll
 H:\New Project\LBS\LbsModel\bin\Debug\LbsModel.pdb
 H:\New Project\LBS\LbsModel\obj\Debug\LbsModel.dll
 H:\New Project\LBS\LbsModel\obj\Debug\LbsModel.pdb
 H:\New Project\LBS\LbsModel\obj\Debug\LbsModel.csprojResolveAssemblyReference.cache
+=======
+E:\code-all\code-lbs\code\ad_lbs_service\LBS\LbsModel\bin\Debug\LbsModel.dll
+E:\code-all\code-lbs\code\ad_lbs_service\LBS\LbsModel\bin\Debug\LbsModel.pdb
+E:\code-all\code-lbs\code\ad_lbs_service\LBS\LbsModel\obj\Debug\LbsModel.csprojResolveAssemblyReference.cache
+E:\code-all\code-lbs\code\ad_lbs_service\LBS\LbsModel\obj\Debug\LbsModel.dll
+E:\code-all\code-lbs\code\ad_lbs_service\LBS\LbsModel\obj\Debug\LbsModel.pdb
+>>>>>>> origin/master

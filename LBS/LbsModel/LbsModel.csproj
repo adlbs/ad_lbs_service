@@ -7,11 +7,18 @@
     <ProjectGuid>{81B669D6-D78E-4A48-A806-91F34B35DFA6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
+<<<<<<< HEAD
     <RootNamespace>LBS</RootNamespace>
     <AssemblyName>LbsModel</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+=======
+    <RootNamespace>LbsModel</RootNamespace>
+    <AssemblyName>LbsModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+>>>>>>> origin/master
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

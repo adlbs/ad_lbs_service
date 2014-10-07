@@ -1,0 +1,9 @@
+H:\New Project\LBS\Util\bin\Debug\LBS.dll
+H:\New Project\LBS\Util\bin\Debug\LBS.pdb
+H:\New Project\LBS\Util\bin\Debug\LbsDAl.dll
+H:\New Project\LBS\Util\bin\Debug\LbsModel.dll
+H:\New Project\LBS\Util\bin\Debug\LbsDAl.pdb
+H:\New Project\LBS\Util\bin\Debug\LbsModel.pdb
+H:\New Project\LBS\Util\obj\Debug\Util.csprojResolveAssemblyReference.cache
+H:\New Project\LBS\Util\obj\Debug\LBS.dll
+H:\New Project\LBS\Util\obj\Debug\LBS.pdb

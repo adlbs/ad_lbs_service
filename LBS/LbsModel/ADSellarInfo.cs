@@ -2,7 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+<<<<<<< HEAD
 namespace LBS
+=======
+using System.Threading.Tasks;
+
+namespace LbsModel
+>>>>>>> origin/master
 {
     /// <summary>
     /// 广告商家基本信息表的实体类

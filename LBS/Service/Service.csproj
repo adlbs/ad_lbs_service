@@ -52,6 +52,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD:LBS/Service/Service.csproj
     <Content Include="Service.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -60,11 +61,14 @@
       <DependentUpon>Service.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+=======
+>>>>>>> origin/master:LBS/WS_time/LBS.csproj
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
+<<<<<<< HEAD:LBS/Service/Service.csproj
   <ItemGroup>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -83,6 +87,8 @@
       <Name>Util</Name>
     </ProjectReference>
   </ItemGroup>
+=======
+>>>>>>> origin/master:LBS/WS_time/LBS.csproj
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

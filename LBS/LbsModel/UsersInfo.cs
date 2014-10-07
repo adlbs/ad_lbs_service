@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using System.Data;
 using System.Text;
 
+<<<<<<< HEAD
 namespace LBS
+=======
+namespace LbsModel
+>>>>>>> origin/master
 {
     /// <summary>
     /// 用户基本信息表的实体类

@@ -2,7 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+<<<<<<< HEAD
 namespace LBS 
+=======
+namespace LbsModel 
+>>>>>>> origin/master
 {
     /// <summary>
     /// 广告类型或者用户爱好表的实体类

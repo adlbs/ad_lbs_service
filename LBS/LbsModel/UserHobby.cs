@@ -2,7 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+<<<<<<< HEAD
 namespace LBS 
+=======
+namespace LbsModel 
+>>>>>>> origin/master
 {
     /// <summary>
     /// 用户爱好表

@@ -2,8 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+<<<<<<< HEAD
 
 namespace LBS
+=======
+using System.Threading.Tasks;
+
+namespace LbsModel
+>>>>>>> origin/master
 {
     /// <summary>
     /// 广告操作表的实体类

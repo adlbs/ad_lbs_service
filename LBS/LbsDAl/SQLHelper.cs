@@ -5,7 +5,11 @@ using System.Text;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+<<<<<<< HEAD
 namespace LBS
+=======
+namespace LbsDAl
+>>>>>>> origin/master
 {
     /// <summary>
     /// 真正对数据库进行操作的类，固定的，在其他项目中可以直接使用

@@ -1,0 +1,4 @@
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\LbsXmlConfig\bin\Debug\LbsXmlConfig.dll
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\LbsXmlConfig\bin\Debug\LbsXmlConfig.pdb
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\LbsXmlConfig\obj\Debug\LbsXmlConfig.dll
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\LbsXmlConfig\obj\Debug\LbsXmlConfig.pdb

@@ -1,11 +1,15 @@
-﻿using System;
+﻿
+using LbsDAl;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
-namespace LBS
+namespace LbsDAl
+
 {
+   
     /// <summary>
     /// 用户基本信息表的数据访问类
     /// </summary>
@@ -14,9 +18,10 @@ namespace LBS
         /// <summary>
         /// 添加用户
         /// </summary>
-        /// <param name="user"></param>
+        /// <param name="user">用户实体</param>
         /// <returns>true or false</returns>
-        public static bool AddUser(UsersInfo user)
+        public static bool AddUser(LbsModel.UsersInfo user)
+
         {
 
             string insert_command = "insert into usersinfo (u_id,u_nickname,u_password,u_email,u_gender,u_birthday,u_phone,u_address,u_registertime,u_icon,u_createtime,u_altertime)";
@@ -48,7 +53,8 @@ namespace LBS
         /// </summary>
         /// <param name="user">不为空的user实体类</param>
         /// <returns>true or false</returns>
-        public static bool EditUserInfo(UsersInfo user)
+        public static bool EditUserInfo(LbsModel.UsersInfo user)
+
         {
             string update_command = "update  usersinfo set u_nickname=@u_nickname,u_password=@u_password,u_email=@u_email,u_gender=@u_gender,u_birthday=@u_birthday,u_address=@u_address,u_registertime=@u_registertime,u_icon=@u_icon,u_createtime=@u_createtime,u_altertime=@u_altertime";
             update_command += " where u_id=@u_id";
@@ -73,22 +79,39 @@ namespace LBS
         }
 
         /// <summary>
-        /// 根据用户ID查询此用户信息
+        /// 查询用户基本信息
         /// </summary>
-        /// <param name="u_ID">用户ID</param>
-        /// <returns>返回此用户的实体类对象user</returns>
-        public static UsersInfo SelectByUserID(string u_ID)
+        /// <param name="keyword">查询信息</param>
+        /// <param name="keyType">查询类型</param>
+        /// <returns>返回用户基本信息实体类</returns>
+        public static LbsModel.UsersInfo SelectByKeyWord(string keyword, UserSelectKeyWordType keyType)
+
         {
-            UsersInfo user = new UsersInfo();
+            LbsModel.UsersInfo user = new LbsModel.UsersInfo();
+
             string selectUser_command = "select * from usersinfo ";
-            selectUser_command += "where u_id=@u_id";
+            //进行查询类型选择
+            switch (keyType)
+            {
+                case UserSelectKeyWordType.ID:
+                    {
+                        selectUser_command += "where u_id=@keyword";
+                    }; break;
+                case UserSelectKeyWordType.Email:
+                    {
+                        selectUser_command += "where u_email=@keyword";
+                    }; break;
+                case UserSelectKeyWordType.PhoneNumber:
+                    {
+                        selectUser_command += "where u_phone=@keyword";
+                    }; break;
+            }
             SqlParameter[] p = new SqlParameter[] 
             {
-               new SqlParameter("@u_id",u_ID)
+                 new SqlParameter("@keyword",keyword)
             };
-            
-            SqlDataReader sdr = SQLHelper.ExecuteDataReader(selectUser_command,CommandType.Text,p);
-          
+            SqlDataReader sdr = SQLHelper.ExecuteDataReader(selectUser_command, CommandType.Text, p);
+
             //将数据库中的此用户信息放入实体类User
             while (sdr.Read())
             {
@@ -96,6 +119,7 @@ namespace LBS
                 user.U_Nickname = sdr["u_nickname"].ToString();
                 user.U_Password = sdr["u_password"].ToString();
                 user.U_Email = sdr["u_email"].ToString();
+                user.U_Phone = sdr["u_phone"].ToString();
                 user.U_Gender = sdr["u_gender"].ToString();
                 user.U_Birthday = sdr["u_birthday"];
                 user.U_Address = sdr["u_address"].ToString();
@@ -105,6 +129,44 @@ namespace LBS
                 user.U_AlterTime = sdr["u_altertime"];
             }
             return user;
+        }
+
+        /// <summary>
+        /// 查询用户是否存在
+        /// </summary>
+        /// <param name="keyword">查询信息</param>
+        /// <param name="keyType">查询类型</param>
+        /// <returns>true or false</returns>
+        public static bool IsUserExist(string keyword, UserSelectKeyWordType keyType)
+        {
+            string selectUser_command = String.Empty;
+            //进行查询类型选择
+            switch (keyType)
+            {
+                case UserSelectKeyWordType.ID:
+                    {
+                        selectUser_command = "select count(u_id) from usersinfo";
+                        selectUser_command += " where u_id=@keyword";
+                    }; break;
+                case UserSelectKeyWordType.Email:
+                    {
+                        selectUser_command = "select count(u_email) from usersinfo";
+                        selectUser_command += " where u_email=@keyword";
+                    }; break;
+                case UserSelectKeyWordType.PhoneNumber:
+                    {
+                        selectUser_command = "select count(u_phone) from usersinfo";
+                        selectUser_command += " where u_phone=@keyword";
+                    }; break;
+            }
+            SqlParameter[] p = new SqlParameter[] 
+            {
+                 new SqlParameter("@keyword",keyword)
+            };
+
+            int i = (int)SQLHelper.ExecuteScalar(selectUser_command, CommandType.Text, p);
+
+            return i > 0;
         }
 
     }

@@ -7,3 +7,12 @@ H:\New Project\LBS\Util\bin\Debug\LbsModel.pdb
 H:\New Project\LBS\Util\obj\Debug\Util.csprojResolveAssemblyReference.cache
 H:\New Project\LBS\Util\obj\Debug\LBS.dll
 H:\New Project\LBS\Util\obj\Debug\LBS.pdb
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\Util\bin\Debug\LBS.dll
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\Util\bin\Debug\LBS.pdb
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\Util\bin\Debug\LbsDAl.dll
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\Util\bin\Debug\LbsModel.dll
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\Util\bin\Debug\LbsDAl.pdb
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\Util\bin\Debug\LbsModel.pdb
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\Util\obj\Debug\Util.csprojResolveAssemblyReference.cache
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\Util\obj\Debug\LBS.dll
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\Util\obj\Debug\LBS.pdb

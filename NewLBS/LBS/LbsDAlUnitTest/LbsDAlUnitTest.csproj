@@ -41,14 +41,21 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdByUserOperate_Test.cs" />
+    <Compile Include="AdInfo_Test.cs" />
+    <Compile Include="ADOperate_Test.cs" />
+    <Compile Include="AdSellarInfo_Test.cs" />
+    <Compile Include="Program_Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQlHelperTest.cs" />
+    <Compile Include="TyepDataAccess_Test.cs" />
+    <Compile Include="UserHobbyDA_Test.cs" />
     <Compile Include="UserInfoDA_Test.cs" />
+    <Compile Include="UserOperate_Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LbsDAl\LbsDAl.csproj">
@@ -58,6 +65,10 @@
     <ProjectReference Include="..\LbsModel\LbsModel.csproj">
       <Project>{81b669d6-d78e-4a48-a806-91f34b35dfa6}</Project>
       <Name>LbsModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LbsXmlConfig\LbsXmlConfig.csproj">
+      <Project>{fbe4b110-8f2f-4f93-a47a-8463e2d8de89}</Project>
+      <Name>LbsXmlConfig</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

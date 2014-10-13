@@ -15,3 +15,10 @@ H:\New Project\LBS\LbsDAl\bin\Debug\LbsModel.pdb
 H:\New Project\LBS\LbsDAl\obj\Debug\LbsDAl.csprojResolveAssemblyReference.cache
 H:\New Project\LBS\LbsDAl\obj\Debug\LbsDAl.dll
 H:\New Project\LBS\LbsDAl\obj\Debug\LbsDAl.pdb
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\LbsDAl\bin\Debug\LbsDAl.dll
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\LbsDAl\bin\Debug\LbsDAl.pdb
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\LbsDAl\bin\Debug\LbsModel.dll
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\LbsDAl\bin\Debug\LbsModel.pdb
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\LbsDAl\obj\Debug\LbsDAl.csprojResolveAssemblyReference.cache
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\LbsDAl\obj\Debug\LbsDAl.dll
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\LbsDAl\obj\Debug\LbsDAl.pdb

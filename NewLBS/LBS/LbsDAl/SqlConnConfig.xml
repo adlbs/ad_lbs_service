@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<!--配置数据路链接字符串-->
+	<appSettings>
+		<add key="SqlConnectionString" value="Data Source=PC-20140223IKWV\SQLEXPRESS;Initial Catalog=LbsDB;Integrated Security=True"/>
+	</appSettings>
+</configuration>

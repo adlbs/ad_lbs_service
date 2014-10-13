@@ -4,7 +4,12 @@ using System.Linq;
 using System.Text;
 
 
-namespace LBS
+
+
+
+
+namespace LbsModel
+
 {
     /// <summary>
     /// 广告基本信息表的实体类
@@ -71,21 +76,21 @@ namespace LBS
             set { ad_ContentType = value; }
         }
 
-        private DateTime ad_CreateTime;
+        private object ad_CreateTime;
         /// <summary>
         /// 此记录创建时间
         /// </summary>
-        public DateTime Ad_CreateTime
+        public object Ad_CreateTime
         {
             get { return ad_CreateTime; }
             set { ad_CreateTime = value; }
         }
 
-        private DateTime ad_AlterTime;
+        private object ad_AlterTime;
         /// <summary>
         /// 此记录修改时间
         /// </summary>
-        public DateTime Ad_AlterTime
+        public object Ad_AlterTime
         {
             get { return ad_AlterTime; }
             set { ad_AlterTime = value; }

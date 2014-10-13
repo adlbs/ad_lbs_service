@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace LBS
+
+
+namespace LbsModel
+
 {
     /// <summary>
     /// 广告操作表的实体类
@@ -22,21 +25,21 @@ namespace LBS
             set { ad_ID = value; }
         }
 
-        private DateTime ado_ReleaseTime;
+        private object ado_ReleaseTime;
       /// <summary>
       /// 广告投放时间
       /// </summary>
-        public DateTime Ado_ReleaseTime
+        public object Ado_ReleaseTime
         {
             get { return ado_ReleaseTime; }
             set { ado_ReleaseTime = value; }
         }
 
-        private DateTime ado_ExpiredTime;
+        private object ado_ExpiredTime;
       /// <summary>
       /// 广告过期时间
       /// </summary>
-        public DateTime Ado_ExpiredTime
+        public object Ado_ExpiredTime
         {
             get { return ado_ExpiredTime; }
             set { ado_ExpiredTime = value; }
@@ -62,21 +65,21 @@ namespace LBS
             set { ado_ClickCount = value; }
         }
 
-        private DateTime ado_CreateTime;
+        private object ado_CreateTime;
       /// <summary>
       /// 此记录创建时间
       /// </summary>
-        public DateTime Ado_CreateTime
+        public object Ado_CreateTime
         {
             get { return ado_CreateTime; }
             set { ado_CreateTime = value; }
         }
 
-        private DateTime ado_AlterTime;
+        private object ado_AlterTime;
       /// <summary>
       /// 此记录修改时间
       /// </summary>
-        public DateTime Ado_AlterTime
+        public object Ado_AlterTime
         {
             get { return ado_AlterTime; }
             set { ado_AlterTime = value; }

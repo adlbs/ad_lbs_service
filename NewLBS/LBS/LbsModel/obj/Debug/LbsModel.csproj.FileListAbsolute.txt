@@ -7,3 +7,7 @@ H:\New Project\LBS\LbsModel\bin\Debug\LbsModel.pdb
 H:\New Project\LBS\LbsModel\obj\Debug\LbsModel.dll
 H:\New Project\LBS\LbsModel\obj\Debug\LbsModel.pdb
 H:\New Project\LBS\LbsModel\obj\Debug\LbsModel.csprojResolveAssemblyReference.cache
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\LbsModel\bin\Debug\LbsModel.dll
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\LbsModel\bin\Debug\LbsModel.pdb
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\LbsModel\obj\Debug\LbsModel.dll
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\LbsModel\obj\Debug\LbsModel.pdb

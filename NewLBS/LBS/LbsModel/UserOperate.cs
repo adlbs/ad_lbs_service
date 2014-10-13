@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LBS 
+
+namespace LbsModel 
+
 {
     /// <summary>
     /// 用户操作记录表的实体类
@@ -29,21 +31,21 @@ namespace LBS
 			set { uo_OnlineStatus = value; }
 		}
 	
-		private DateTime uo_OnlineTime;
+		private object uo_OnlineTime;
         /// <summary>
         /// 用户上线时间
         /// </summary>
-		public DateTime Uo_OnlineTime
+		public object Uo_OnlineTime
 		{
 			get { return uo_OnlineTime; }
 			set { uo_OnlineTime = value; }
 		}
 	
-		private DateTime uo_OfflineTime;
+		private object uo_OfflineTime;
         /// <summary>
         /// 用户离线时间
         /// </summary>
-		public DateTime Uo_OfflineTime
+		public object Uo_OfflineTime
 		{
 			get { return uo_OfflineTime; }
 			set { uo_OfflineTime = value; }
@@ -59,21 +61,21 @@ namespace LBS
 			set { uo_IpAdress = value; }
 		}
 	
-		private DateTime uo_CreateTime;
+		private object uo_CreateTime;
         /// <summary>
         /// 此记录创建时间
         /// </summary>
-		public DateTime Uo_CreateTime
+		public object Uo_CreateTime
 		{
 			get { return uo_CreateTime; }
 			set { uo_CreateTime = value; }
 		}
 	
-		private DateTime uo_AlterTime;
+		private object uo_AlterTime;
         /// <summary>
         /// 此记录修改时间
         /// </summary>
-		public DateTime Uo_AlterTime
+		public object Uo_AlterTime
 		{
 			get { return uo_AlterTime; }
 			set { uo_AlterTime = value; }

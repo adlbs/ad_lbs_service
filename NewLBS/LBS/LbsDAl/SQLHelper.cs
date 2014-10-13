@@ -5,16 +5,38 @@ using System.Text;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-namespace LBS
+
+
+
+namespace LbsDAl
+
 {
     /// <summary>
     /// 真正对数据库进行操作的类，固定的，在其他项目中可以直接使用
     /// </summary>
     public static class SQLHelper
     {
-        //无法取出app.config中的链接字符串的值--还在解决中
-        // public static string constr = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
-        public static string constr = @"Data Source=PC-20140223IKWV\SQLEXPRESS;Initial Catalog=LbsDB;Integrated Security=True";
+        //改
+       static  string  constr; //链接字符串
+        /// <summary>
+        /// 链接数据库字符串
+        /// </summary>
+        public static string  Constr
+        {
+            get 
+            {   //从XMl文件中读取链接字符串
+               // LbsXmlConfig.XmlConfigReader xrd = new LbsXmlConfig.XmlConfigReader(@"E:\code-all\code-lbs\code\ad_lbs_service\LBS\LbsDAl\SqlConnConfig.xml");
+               // constr = xrd.Process("appSettings", "SqlConnectionString");
+                //xml文件配置读取有误的情况下
+                constr = @"Data Source=PC-20140223IKWV\SQLEXPRESS;Initial Catalog=LbsDB;Integrated Security=True";       
+                return constr;
+            }
+        }
+
+        
+        //public static string constr = @"Data Source=PC-20140223IKWV\SQLEXPRESS;Initial Catalog=LbsDB;Integrated Security=True";       
+      
+        
         /// <summary>
         /// 执行不带参数的增删改的SQL语句或存储过程，返回受影响的行数
         /// </summary>
@@ -24,7 +46,7 @@ namespace LBS
         public static int ExecuteNonQuery(string cmdText, CommandType cmdType)
         {
             int r;
-            using (SqlConnection cn = new SqlConnection(constr))
+            using (SqlConnection cn = new SqlConnection(Constr))//此后的constr均改为属性访问的Constr
             {
                 try
                 {
@@ -50,8 +72,9 @@ namespace LBS
         {
 
             CheckParamException(param);
+
             int r;
-            using (SqlConnection cn = new SqlConnection(constr))
+            using (SqlConnection cn = new SqlConnection(Constr))
             {
                 try
                 {
@@ -77,7 +100,7 @@ namespace LBS
         public static DataSet ExecuteDataSet(string cmdText, CommandType cmdType)
         {
             DataSet ds = new DataSet();
-            using (SqlConnection cn = new SqlConnection(constr))
+            using (SqlConnection cn = new SqlConnection(Constr))
             {
                 try
                 {
@@ -103,7 +126,7 @@ namespace LBS
         public static DataSet ExecuteDataSet(string cmdText, CommandType cmdType, SqlParameter[] param)
         {
             DataSet ds = new DataSet();
-            using (SqlConnection cn = new SqlConnection(constr))
+            using (SqlConnection cn = new SqlConnection(Constr))
             {
                 try
                 {
@@ -130,7 +153,7 @@ namespace LBS
         public static SqlDataReader ExecuteDataReader(string cmdText, CommandType cmdType)
         {
             SqlDataReader sdr;
-            SqlConnection cn = new SqlConnection(constr);
+            SqlConnection cn = new SqlConnection(Constr);
             try
             {
                 cn.Open();
@@ -152,8 +175,10 @@ namespace LBS
         /// <returns>返回DataReader结果集</returns>
         public static SqlDataReader ExecuteDataReader(string cmdText, CommandType cmdType, SqlParameter[] param)
         {
+            CheckParamException(param);
+
             SqlDataReader sdr;
-            SqlConnection cn = new SqlConnection(constr);
+            SqlConnection cn = new SqlConnection(Constr);
             try
             {
                 cn.Open();
@@ -177,7 +202,7 @@ namespace LBS
         public static object ExecuteScalar(string cmdText, CommandType cmdType)
         {
             object o;
-            using (SqlConnection cn = new SqlConnection(constr))
+            using (SqlConnection cn = new SqlConnection(Constr))
             {
 
                 try
@@ -203,7 +228,7 @@ namespace LBS
         public static object ExecuteScalar(string cmdText, CommandType cmdType, SqlParameter[] param)
         {
             object o;
-            using (SqlConnection cn = new SqlConnection(constr))
+            using (SqlConnection cn = new SqlConnection(Constr))
             {
 
                 try

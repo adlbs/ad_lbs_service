@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LBS 
+
+namespace LbsModel 
+
 {
     /// <summary>
     /// 用户爱好表
@@ -29,21 +31,21 @@ namespace LBS
 			set { t_ID = value; }
 		}
 	
-		private DateTime uh_CreateTime;
+		private object  uh_CreateTime;
         /// <summary>
         /// 此记录创建时间
         /// </summary>
-		public DateTime Uh_CreateTime
+		public object Uh_CreateTime
 		{
 			get { return uh_CreateTime; }
 			set { uh_CreateTime = value; }
 		}
 	
-		private DateTime uh_AlterTime;
+		private object uh_AlterTime;
         /// <summary>
         /// 此记录修改时间
         /// </summary>
-		public DateTime Uh_AlterTime
+		public object Uh_AlterTime
 		{
 			get { return uh_AlterTime; }
 			set { uh_AlterTime = value; }

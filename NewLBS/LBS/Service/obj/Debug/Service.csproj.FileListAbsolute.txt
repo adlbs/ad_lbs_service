@@ -8,3 +8,15 @@ H:\New Project\LBS\Service\bin\LbsDAl.dll
 H:\New Project\LBS\Service\bin\LbsModel.dll
 H:\New Project\LBS\Service\bin\LbsDAl.pdb
 H:\New Project\LBS\Service\bin\LbsModel.pdb
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\Service\bin\Service.dll.config
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\Service\bin\Service.dll
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\Service\bin\Service.pdb
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\Service\bin\LBS.dll
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\Service\bin\LbsDAl.dll
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\Service\bin\LbsModel.dll
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\Service\bin\LbsDAl.pdb
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\Service\bin\LBS.pdb
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\Service\bin\LbsModel.pdb
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\Service\obj\Debug\Service.dll
+E:\code-all\code-lbs\code\new ad_lbs_code\ad_lbs_service\NewLBS\LBS\Service\obj\Debug\Service.pdb

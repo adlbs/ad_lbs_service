@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LBS 
+
+namespace LbsModel 
+
 {
     /// <summary>
     /// 广告类型或者用户爱好表的实体类

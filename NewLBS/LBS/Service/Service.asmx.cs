@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Services;
 using LBS;
+using LbsDAl;
 namespace LBS_Service
 {
     /// <summary>
@@ -31,7 +32,7 @@ namespace LBS_Service
                 
                 string sql = "Select u_ID from UsersInfo where u_Email=\'" + email.Trim() + "\' and u_Password=\'" + userpassword.Trim() + "\'" + " ;";
 
-                int f = (int)LBS.SQLHelper.ExecuteScalar(sql, CommandType.Text);
+                int f = (int)SQLHelper.ExecuteScalar(sql, CommandType.Text);
                
                 if (f > 0)
                     return true.ToString();
@@ -58,7 +59,7 @@ namespace LBS_Service
                 ds = SQLHelper.ExecuteDataSet(sql, CommandType.Text);
                 return ds.GetXml();
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 LogHelper.CreateLocalLog("ErrorLog", "SQLError", e.Message);
                 LogHelper.CreateSQLLog("Error" + DateTime.Now.Millisecond.ToString(), DateTime.Now.ToString(), e.Message, e.GetType().FullName);
@@ -76,7 +77,7 @@ namespace LBS_Service
                 ds = SQLHelper.ExecuteDataSet(sql, CommandType.Text);
                 return ds.GetXml();
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 LogHelper.CreateLocalLog("ErrorLog", "SQLError", e.Message);
                 LogHelper.CreateSQLLog("Error" + DateTime.Now.Millisecond.ToString(), DateTime.Now.ToString(), e.Message, e.GetType().FullName);
@@ -91,10 +92,10 @@ namespace LBS_Service
             {
                 string sql = "select ADInfo.ad_ID,ADInfo.ad_Title,ADInfo.t_ID,ADInfo.ad_ContentType,ADInfo.ad_CreateTime from ADInfo where ADInfo.ad_CreateTime=\'" + date.Trim() + "\' ";//查询广告的Sql语句
                 DataSet ds = new DataSet();
-                ds = LBS.SQLHelper.ExecuteDataSet(sql, CommandType.Text);
+                ds = SQLHelper.ExecuteDataSet(sql, CommandType.Text);
                 return ds.GetXml();
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 LogHelper.CreateLocalLog("ErrorLog", "SQLError", e.Message);
                 LogHelper.CreateSQLLog("Error" + DateTime.Now.Millisecond.ToString(), DateTime.Now.ToString(), e.Message, e.GetType().FullName);
@@ -110,10 +111,10 @@ namespace LBS_Service
             {
                 string sql = "select * from ADInfo where ADInfo.ad_ID=\'"+id.ToString()+"\'";//SQL语句
                 DataSet ds;
-                ds = LBS.SQLHelper.ExecuteDataSet(sql, CommandType.Text);
+                ds = SQLHelper.ExecuteDataSet(sql, CommandType.Text);
                 return ds.GetXml();
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 LogHelper.CreateLocalLog("ErrorLog", "SQLError", e.Message);
                 LogHelper.CreateSQLLog("Error" + DateTime.Now.Millisecond.ToString(), DateTime.Now.ToString(), e.Message, e.GetType().FullName);
@@ -146,7 +147,7 @@ namespace LBS_Service
                 lo_conn.Dispose();
                 return true.ToString();
             }
-            catch (Exception )
+            catch (Exception e)
             {
                 LogHelper.CreateLocalLog("ErrorLog", "SQLError", e.Message);
                 LogHelper.CreateSQLLog("Error" + DateTime.Now.Millisecond.ToString(), DateTime.Now.ToString(), e.Message, e.GetType().FullName);
@@ -170,12 +171,12 @@ namespace LBS_Service
             {
 
                 string sql = @"insert into UsersInfo(,u_ID,u_Nickname,u_Password,u_Email) values(\'"+FindNumber(DateTime.Now.ToString())+"\',\'" + username.Trim() + "\',\'" + userpassword.Trim() + "\'," + email.Trim() + "\');";
-                if (LBS.SQLHelper.ExecuteNonQuery(sql, CommandType.Text) > 0)
+                if (SQLHelper.ExecuteNonQuery(sql, CommandType.Text) > 0)
                     return true.ToString();
                 else
                     return false.ToString();
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 LogHelper.CreateLocalLog("ErrorLog", "SQLError", e.Message);
                 LogHelper.CreateSQLLog("Error" + DateTime.Now.Millisecond.ToString(), DateTime.Now.ToString(), e.Message, e.GetType().FullName);
@@ -211,7 +212,7 @@ namespace LBS_Service
                 return ds;
                
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 LogHelper.CreateLocalLog("ErrorLog", "SQLError", e.Message);
                 LogHelper.CreateSQLLog("Error" + DateTime.Now.Millisecond.ToString(), DateTime.Now.ToString(), e.Message, e.GetType().FullName);
@@ -245,7 +246,7 @@ namespace LBS_Service
                 lo_conn.Dispose();
                 return xml;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 LogHelper.CreateLocalLog("ErrorLog", "SQLError", e.Message);
                 LogHelper.CreateSQLLog("Error" + DateTime.Now.Millisecond.ToString(), DateTime.Now.ToString(), e.Message, e.GetType().FullName);

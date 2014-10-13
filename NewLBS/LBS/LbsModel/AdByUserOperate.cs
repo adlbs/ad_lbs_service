@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace LBS
+
+
+
+namespace LbsModel
+
 {
     /// <summary>
     /// 用户对广告进行的操作记录表的实体类
@@ -30,21 +34,21 @@ namespace LBS
             set { u_ID = value; }
         }
 
-        private DateTime auo_CreateTime;
+        private object auo_CreateTime;
       /// <summary>
       /// 此记录创建时间
       /// </summary>
-        public DateTime Auo_CreateTime
+        public object Auo_CreateTime
         {
             get { return auo_CreateTime; }
             set { auo_CreateTime = value; }
         }
 
-        private DateTime auo_AlterTime;
+        private object auo_AlterTime;
       /// <summary>
       /// 此记录修改时间
       /// </summary>
-        public DateTime Auo_AlterTime
+        public object Auo_AlterTime
         {
             get { return auo_AlterTime; }
             set { auo_AlterTime = value; }

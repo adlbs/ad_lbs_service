@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-namespace LBS
+
+
+namespace LbsModel
+
 {
     /// <summary>
     /// 广告商家基本信息表的实体类
@@ -39,21 +42,21 @@ namespace LBS
             set { ads_Company = value; }
         }
 
-        private DateTime ads_CreateTime;
+        private object ads_CreateTime;
         /// <summary>
         /// 此记录创建时间
         /// </summary>
-        public DateTime Ads_CreateTime
+        public object Ads_CreateTime
         {
             get { return ads_CreateTime; }
             set { ads_CreateTime = value; }
         }
 
-        private DateTime ads_AlterTime;
+        private object ads_AlterTime;
         /// <summary>
         /// 此记录修改时间
         /// </summary>
-        public DateTime Ads_AlterTime
+        public object Ads_AlterTime
         {
             get { return ads_AlterTime; }
             set { ads_AlterTime = value; }

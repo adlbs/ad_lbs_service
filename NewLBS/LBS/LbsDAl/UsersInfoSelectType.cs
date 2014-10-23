@@ -12,6 +12,7 @@ namespace LbsDAl
     {
         ID,//用户Id
         Email,//用户Email
-        PhoneNumber //用户电话号码
+        PhoneNumber, //用户电话号码
+        NickName //用户名
     }
 }

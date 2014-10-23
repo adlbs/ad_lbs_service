@@ -78,6 +78,10 @@ namespace LbsDAlUnitTest
         {
             Console.WriteLine(LbsDAl.UsersInfoDataAccess.SelectByKeyWord("2013",LbsDAl.UserSelectKeyWordType.ID));
         }
+        public void TestUserIsLogin()
+        {
+            Console.WriteLine(LbsDAl.UsersInfoDataAccess.IsUserLogin("zx","123",LbsDAl.UserSelectKeyWordType.NickName));
+        }
     }
   
 }

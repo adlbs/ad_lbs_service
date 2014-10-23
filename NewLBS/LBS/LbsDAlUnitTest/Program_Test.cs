@@ -23,7 +23,8 @@ namespace LbsDAlUnitTest
             //ut.TestEditUser();
             //ut.TestXMlRead();
            // ut.TestUserIsExist();
-            ut.TestUserSelect();
+           // ut.TestUserSelect();
+            ut.TestUserIsLogin();
             #endregion
             #region adsellarinfoDA_test
           //  AdSellarInfo_Test at = new AdSellarInfo_Test();

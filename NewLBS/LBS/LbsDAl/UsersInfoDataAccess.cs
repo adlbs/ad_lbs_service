@@ -7,9 +7,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 namespace LbsDAl
-
 {
-   
+
     /// <summary>
     /// 用户基本信息表的数据访问类
     /// </summary>
@@ -21,7 +20,6 @@ namespace LbsDAl
         /// <param name="user">用户实体</param>
         /// <returns>true or false</returns>
         public static bool AddUser(LbsModel.UsersInfo user)
-
         {
 
             string insert_command = "insert into usersinfo (u_id,u_nickname,u_password,u_email,u_gender,u_birthday,u_phone,u_address,u_registertime,u_icon,u_createtime,u_altertime)";
@@ -54,7 +52,6 @@ namespace LbsDAl
         /// <param name="user">不为空的user实体类</param>
         /// <returns>true or false</returns>
         public static bool EditUserInfo(LbsModel.UsersInfo user)
-
         {
             string update_command = "update  usersinfo set u_nickname=@u_nickname,u_password=@u_password,u_email=@u_email,u_gender=@u_gender,u_birthday=@u_birthday,u_address=@u_address,u_registertime=@u_registertime,u_icon=@u_icon,u_createtime=@u_createtime,u_altertime=@u_altertime";
             update_command += " where u_id=@u_id";
@@ -85,7 +82,6 @@ namespace LbsDAl
         /// <param name="keyType">查询类型</param>
         /// <returns>返回用户基本信息实体类</returns>
         public static LbsModel.UsersInfo SelectByKeyWord(string keyword, UserSelectKeyWordType keyType)
-
         {
             LbsModel.UsersInfo user = new LbsModel.UsersInfo();
 
@@ -169,5 +165,46 @@ namespace LbsDAl
             return i > 0;
         }
 
+        /// <summary>
+        /// 用户登录
+        /// </summary>
+        /// <param name="userName">用户名/电子邮箱/电话号码</param>
+        /// <param name="password">密码</param>
+        /// <param name="keyType">登录名的类型选择</param>
+        /// <returns>true or false</returns>
+        public static bool IsUserLogin(string userName, string password, UserSelectKeyWordType keyType)
+        {
+            string selectUser_command = String.Empty;
+            //进行查询类型选择
+            switch (keyType)
+            {
+                case UserSelectKeyWordType.NickName:
+                    {
+                        selectUser_command = "select count(*) from usersinfo";
+                        selectUser_command += " where u_nickname=@userName and u_password=@password";
+                    }; break;
+                case UserSelectKeyWordType.Email:
+                    {
+                        selectUser_command = "select count(*) from usersinfo";
+                        selectUser_command += " where u_email=@userName and u_password=@password";
+                    }; break;
+                case UserSelectKeyWordType.PhoneNumber:
+                    {
+                        selectUser_command = "select count(*) from usersinfo";
+                        selectUser_command += " where u_phone=@userName and u_password=@password";
+                    }; break;
+
+            }
+            SqlParameter[] p = new SqlParameter[] 
+            {
+                 new SqlParameter("@userName",userName),
+                 new SqlParameter("@password",password)
+            };
+
+            int i = (int)SQLHelper.ExecuteScalar(selectUser_command,CommandType.Text,p);
+
+            return i > 0;
+
+        }
     }
 }

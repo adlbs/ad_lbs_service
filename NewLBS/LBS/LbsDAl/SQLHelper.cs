@@ -25,7 +25,7 @@ namespace LbsDAl
         {
             get 
             {   //从XMl文件中读取链接字符串
-               // LbsXmlConfig.XmlConfigReader xrd = new LbsXmlConfig.XmlConfigReader(@"E:\code-all\code-lbs\code\ad_lbs_service\LBS\LbsDAl\SqlConnConfig.xml");
+               // LbsXmlConfig.XmlConfigReader xrd = new LbsXmlConfig.XmlConfigReader(@"E:\code-all\code-lbs\code\ad_lbs_service\LBS\LbsDAl\SqlConnConfig.xml");//需要绝对路径
                // constr = xrd.Process("appSettings", "SqlConnectionString");
                 //xml文件配置读取有误的情况下
                 constr = @"Data Source=PC-20140223IKWV\SQLEXPRESS;Initial Catalog=LbsDB;Integrated Security=True";       
@@ -125,6 +125,7 @@ namespace LbsDAl
         /// <returns>返回DataSet结果集</returns>
         public static DataSet ExecuteDataSet(string cmdText, CommandType cmdType, SqlParameter[] param)
         {
+            CheckParamException(param);
             DataSet ds = new DataSet();
             using (SqlConnection cn = new SqlConnection(Constr))
             {
@@ -227,6 +228,7 @@ namespace LbsDAl
         /// <returns>返回首行首列</returns>
         public static object ExecuteScalar(string cmdText, CommandType cmdType, SqlParameter[] param)
         {
+            CheckParamException(param);
             object o;
             using (SqlConnection cn = new SqlConnection(Constr))
             {
@@ -246,7 +248,6 @@ namespace LbsDAl
             }
             return o;
         }
-
         /// <summary>
         /// 检查参数是否为空
         /// </summary>

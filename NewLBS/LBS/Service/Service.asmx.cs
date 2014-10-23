@@ -23,38 +23,58 @@ namespace LBS_Service
 
         //--------------------------------------------------------------------------------------------
         [WebMethod(Description = "登录服务器")]
-        public string login(string email, string userpassword)
+        public bool login(string userName, string password, string loginType)
         {
-
-            
+            //string email, string userpassword 改
+            //改方法返回值为bool,原来为string
             try
             {
-                
-                string sql = "Select u_ID from UsersInfo where u_Email=\'" + email.Trim() + "\' and u_Password=\'" + userpassword.Trim() + "\'" + " ;";
 
-                int f = (int)SQLHelper.ExecuteScalar(sql, CommandType.Text);
-               
-                if (f > 0)
-                    return true.ToString();
-                else
-                    return false.ToString();
+
+                //string sql = "Select u_ID from UsersInfo where u_Email=\'" + email.Trim() + "\' and u_Password=\'" + userpassword.Trim() + "\'" + " ;";
+
+                //int f = (int)SQLHelper.ExecuteScalar(sql, CommandType.Text);
+
+                //if (f > 0)
+                //    return true.ToString();
+                //else
+                //    return false.ToString();
+                //改
+                bool flag = false;
+                switch (loginType)
+                {
+                    case "nickName":
+                        {
+                            flag = LbsDAl.UsersInfoDataAccess.IsUserLogin(userName, password, LbsDAl.UserSelectKeyWordType.NickName);
+                        }; break;
+                    case "email":
+                        {
+                            flag = LbsDAl.UsersInfoDataAccess.IsUserLogin(userName, password, LbsDAl.UserSelectKeyWordType.Email);
+                        }; break;
+                    case "phone":
+                        {
+                            flag = LbsDAl.UsersInfoDataAccess.IsUserLogin(userName, password, LbsDAl.UserSelectKeyWordType.PhoneNumber);
+                        }; break;
+                }
+
+                return flag;
             }
             catch (Exception e)
             {
                 LogHelper.CreateLocalLog("ErrorLog", "SQLError", e.Message);
                 LogHelper.CreateSQLLog("Error" + DateTime.Now.Millisecond.ToString(), DateTime.Now.ToString(), e.Message, e.GetType().FullName);
-                return false.ToString();
+                return false;
             }
 
         }
-        
+
         //--------------------------------------------------------------------------------------------
         [WebMethod(Description = "以广告类别获取广告列表")]
         public string getADListByType(string t_ID, string ad_ContentType)
         {
             try
             {
-                string sql = "select ADInfo.ad_ID,ADInfo.ad_Title,ADInfo.t_ID,ADInfo.ad_ContentType,ADInfo.ad_CreateTime from ADInfo where ADInfo.t_ID=\'"+t_ID.Trim()+"\' and ad_ContentType=\'"+ad_ContentType.Trim()+"\'";//查询广告的Sql语句
+                string sql = "select ADInfo.ad_ID,ADInfo.ad_Title,ADInfo.t_ID,ADInfo.ad_ContentType,ADInfo.ad_CreateTime from ADInfo where ADInfo.t_ID=\'" + t_ID.Trim() + "\' and ad_ContentType=\'" + ad_ContentType.Trim() + "\'";//查询广告的Sql语句
                 DataSet ds = new DataSet();
                 ds = SQLHelper.ExecuteDataSet(sql, CommandType.Text);
                 return ds.GetXml();
@@ -102,14 +122,14 @@ namespace LBS_Service
                 return "";
             }
         }
-       
+
         //--------------------------------------------------------------------------------------------
         [WebMethod(Description = "以广告ID获取广告详情")]
         public string getADById(int id)
         {
             try
             {
-                string sql = "select * from ADInfo where ADInfo.ad_ID=\'"+id.ToString()+"\'";//SQL语句
+                string sql = "select * from ADInfo where ADInfo.ad_ID=\'" + id.ToString() + "\'";//SQL语句
                 DataSet ds;
                 ds = SQLHelper.ExecuteDataSet(sql, CommandType.Text);
                 return ds.GetXml();
@@ -120,8 +140,8 @@ namespace LBS_Service
                 LogHelper.CreateSQLLog("Error" + DateTime.Now.Millisecond.ToString(), DateTime.Now.ToString(), e.Message, e.GetType().FullName);
                 return "";
             }
-            
-           
+
+
 
         }
         //--------------------------------------------------------------------------------------------
@@ -133,7 +153,7 @@ namespace LBS_Service
             {
                 lo_conn.Open();
             }
-            catch (Exception )
+            catch (Exception)
             {
                 return false.ToString();
             }
@@ -165,12 +185,12 @@ namespace LBS_Service
         //--------------------------------------------------------------------------------------------
         [WebMethod(Description = "注册新用户  目前只是模型,具体不一定这么写")]
         public string register(string username, string userpassword, string email)
-        { 
-             
+        {
+
             try
             {
 
-                string sql = @"insert into UsersInfo(,u_ID,u_Nickname,u_Password,u_Email) values(\'"+FindNumber(DateTime.Now.ToString())+"\',\'" + username.Trim() + "\',\'" + userpassword.Trim() + "\'," + email.Trim() + "\');";
+                string sql = @"insert into UsersInfo(,u_ID,u_Nickname,u_Password,u_Email) values(\'" + FindNumber(DateTime.Now.ToString()) + "\',\'" + username.Trim() + "\',\'" + userpassword.Trim() + "\'," + email.Trim() + "\');";
                 if (SQLHelper.ExecuteNonQuery(sql, CommandType.Text) > 0)
                     return true.ToString();
                 else
@@ -182,9 +202,9 @@ namespace LBS_Service
                 LogHelper.CreateSQLLog("Error" + DateTime.Now.Millisecond.ToString(), DateTime.Now.ToString(), e.Message, e.GetType().FullName);
                 return false.ToString();
             }
-           
+
         }
-       
+
         //--------------------------------------------------------------------------------------------
         [WebMethod(Description = "执行一条指定SQL只返回执行结果-DataSet")]
         public DataSet setSQLOfDataSet(string sql)
@@ -206,11 +226,11 @@ namespace LBS_Service
                 SqlDataAdapter dbAdapter = new SqlDataAdapter(Sqlcom);
                 DataSet ds = new DataSet();
                 dbAdapter.Fill(ds);
-               
+
                 lo_conn.Close();
                 lo_conn.Dispose();
                 return ds;
-               
+
             }
             catch (Exception e)
             {
@@ -237,7 +257,7 @@ namespace LBS_Service
                 SqlCommand Sqlcom = new SqlCommand();
                 Sqlcom.Connection = lo_conn;
                 Sqlcom.CommandText = sql;
-                
+
                 SqlDataAdapter dbAdapter = new SqlDataAdapter(Sqlcom);
                 DataSet ds = new DataSet();
                 dbAdapter.Fill(ds);

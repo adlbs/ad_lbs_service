@@ -78,6 +78,10 @@
       <Project>{d49328b4-2452-4649-8eba-de2eb1d068d5}</Project>
       <Name>LbsDAl</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LbsModel\LbsModel.csproj">
+      <Project>{81b669d6-d78e-4a48-a806-91f34b35dfa6}</Project>
+      <Name>LbsModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Util\Util.csproj">
       <Project>{f8983886-301f-45ec-9c34-1afeb5975ded}</Project>
       <Name>Util</Name>
